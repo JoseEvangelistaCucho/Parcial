@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="70a53ccf-9647-4729-aa4a-39f6e5e6884a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from personas_multa;]]>
+	</queryString>
+	<field name="nombre_multa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dni" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="monto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="correo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="50" y="0" width="465" height="69" uuid="6a6ec1d2-447d-43cf-9b7d-c0faa5bec13f"/>
+				<textElement textAlignment="Justified">
+					<font size="38" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[PERSONAS MULTADAS ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="50" y="2" width="100" height="20" uuid="6a49421e-4dea-4f75-b9a7-333df339c1c5"/>
+				<text><![CDATA[nombre_multa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="2" width="100" height="20" uuid="6095a871-31ab-4bc5-a0ed-78fe934969a8"/>
+				<text><![CDATA[dni]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="354" y="3" width="100" height="20" uuid="090626e8-0618-4571-932d-6a4452fb0bd7"/>
+				<text><![CDATA[correo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="254" y="2" width="100" height="20" uuid="f0e843e5-7511-4c49-ae29-1b5a6e61d2c8"/>
+				<text><![CDATA[monto]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="50" y="0" width="100" height="20" uuid="4e1d12ea-99be-4e31-b2fd-8c86e8546984"/>
+				<textFieldExpression><![CDATA[$F{nombre_multa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="0" width="100" height="20" uuid="a12e14e6-1ca1-40df-a311-532326629928"/>
+				<textFieldExpression><![CDATA[$F{dni}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="354" y="0" width="100" height="20" uuid="bdfa9d70-389f-4c46-a7ff-d102a98249e9"/>
+				<textFieldExpression><![CDATA[$F{correo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="254" y="0" width="100" height="20" uuid="cfdab51c-b7ab-4ec2-94f2-a2cd444b155f"/>
+				<textFieldExpression><![CDATA[$F{monto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
